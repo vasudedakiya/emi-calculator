@@ -7,7 +7,7 @@
  *
  * @return {object}
  */
-function Loan(amount, installmentsNumber, interestRate) {
+function Loan (amount, installmentsNumber, interestRate) {
   /** Checking params */
   if (!amount || amount <= 0 ||
     !installmentsNumber || installmentsNumber <= 0 ||
@@ -83,7 +83,7 @@ const getNextInstallment = (
  *
  * @return {string}       html string with table
  */
-function emiToHtmlTable(loan, params) {
+function emiToHtmlTable (loan, params) {
   params = params || {}
   params.formatMoney = params.formatMoney || function (num) {
     return num.toFixed(2)
@@ -136,7 +136,7 @@ function emiToHtmlTable(loan, params) {
   return html.join('')
 }
 
-function rnd(num) {
+function rnd (num) {
   return Math.round(num * 100) / 100
 }
 
